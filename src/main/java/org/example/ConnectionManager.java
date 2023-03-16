@@ -24,6 +24,7 @@ public class ConnectionManager {
 		hikariDataSource.setJdbcUrl(DB_URL);
 		hikariDataSource.setUsername(USERNAME);
 		hikariDataSource.setPassword(PASSWORD);
+		// poolSize는 WAS 스레드 수를 고려해야 한다. --> 모니터링을 통해서 적정한 poolSize를 정하는 것이 중요하다.
 		hikariDataSource.setMaximumPoolSize(MAX_POOL_SIZE);
 		hikariDataSource.setMinimumIdle(MAX_POOL_SIZE);
 
